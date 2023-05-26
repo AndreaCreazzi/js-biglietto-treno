@@ -1,36 +1,36 @@
 // Controllo funzionamento javascript
 
-console.log(`JS OK`)
+console.log(`JS OK`);
 
 //Prendo gli elementi dal DOM
 
-const priceTicket = document.getElementById(`price`)
+const priceTicket = document.getElementById(`price`);
 
-console.log(priceTicket)
+console.log(priceTicket);
 
-const noDiscount = document.getElementById(`no-discount`)
+const noDiscount = document.getElementById(`no-discount`);
 
-const kilometers = document.getElementById(`kilometers`)
+const kilometers = document.getElementById(`kilometers`);
 
-const age = document.getElementById(`age`)
+const age = document.getElementById(`age`);
 
 //Chiedo all'utente quanti chilometri vuole percorrere
 
-const askKilometers = parseInt(prompt(`Quanti chilometri vuole percorrere?` , 5))
+const askKilometers = parseInt(prompt(`Quanti chilometri vuole percorrere?` , 5));
 
-console.log(askKilometers)
+console.log(askKilometers);
 
 //Chiedo all'utente l'età
 
-const askAge = parseInt(prompt(`Quanti anni ha?` , 25))
+const askAge = parseInt(prompt(`Quanti anni ha?` , 25));
 
-console.log(askAge)
+console.log(askAge);
 
 //inserisco il prezzo del bigletto
 
-const ticket = 0.21
+const ticket = 0.21;
 
-console.log(ticket)
+console.log(ticket);
 
 //Calcolo il prezzo del bigletto in base ai chilometri
 
@@ -40,13 +40,13 @@ let discount;
 
 //Calcolo lo sconto del 20% per i minori di 18 anni
 
-const underDiscount = 0.8
+const underDiscount = 0.8;
 
-console.log(underDiscount)
+console.log(underDiscount);
 
 //Calcolo lo sconto del 40% per i minori di 65 anni
 
-const overDiscount = 0.6
+const overDiscount = 0.6;
 
 console.log(overDiscount)
 
@@ -58,18 +58,18 @@ if(askAge < 18){
    discount = (totalPrice * overDiscount).toFixed(2);
 }
 
-console.log(discount)
+console.log(discount);
 
 //inserire gli elementi nel DOM
 
-priceTicket.innerText = discount
+priceTicket.innerText = discount;
 
 if(discount === undefined){
    priceTicket.innerText = totalPrice;
 }
 
-noDiscount.innerText = totalPrice
+noDiscount.innerText = totalPrice;
 
-kilometers.innerText = askKilometers
+kilometers.innerText = askKilometers;
 
-age.innerHTML = askAge
+age.innerHTML = askAge;

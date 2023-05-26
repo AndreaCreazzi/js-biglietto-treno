@@ -28,21 +28,21 @@ console.log(ticket)
 
 //Calcolo il prezzo del bigletto in base ai chilometri
 
-let totalPrice = askKilometers * ticket
+const totalPrice = askKilometers * ticket
 
-let fixedPrice = totalPrice.toFixed(2)
+const fixedPrice = totalPrice.toFixed(2)
 
 //Calcolo lo sconto del 20% per i minori di 18 anni
 
-let underDiscount = 20 / 100
+const underDiscount = 20 / 100
 
 let discount = fixedPrice * underDiscount
 
-console.log(discount)
+console.log(underDiscount)
 
 //Calcolo lo sconto del 40% per i minori di 65 anni
 
-let overDiscount = 40 / 100
+const overDiscount = 40 / 100
 
 discount = fixedPrice * overDiscount
 

@@ -2,11 +2,17 @@
 
 console.log(`JS OK`)
 
-//Prendo l'elemento dal DOM
+//Prendo gli elementi dal DOM
 
 const priceTicket = document.getElementById(`price`)
 
 console.log(priceTicket)
+
+const noDiscount = document.getElementById(`no-discount`)
+
+const kilometers = document.getElementById(`kilometers`)
+
+const age = document.getElementById(`age`)
 
 //Chiedo all'utente quanti chilometri vuole percorrere
 
@@ -58,6 +64,12 @@ if(askAge < 18){
 
 console.log(discount.toFixed(2))
 
-//inserire l'elemento nel DOM
+//inserire gli elementi nel DOM
 
 priceTicket.innerText = discount.toFixed(2)
+
+noDiscount.innerText = fixedPrice
+
+kilometers.innerText = askKilometers
+
+age.innerHTML = askAge

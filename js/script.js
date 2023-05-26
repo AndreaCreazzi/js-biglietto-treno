@@ -36,8 +36,6 @@ console.log(ticket);
 
 let totalPrice = (askKilometers * ticket).toFixed(2);
 
-let discount;
-
 //Calcolo lo sconto del 20% per i minori di 18 anni
 
 const underDiscount = 0.8;
@@ -52,10 +50,15 @@ console.log(overDiscount)
 
 //Applico gli sconti 
 
+let discount = totalPrice;
+console.log("sono in mezzo");
+
 if(askAge < 18){
    discount = (totalPrice * underDiscount).toFixed(2);
+   console.log("sono minorenne");
 }else if(askAge > 65){
    discount = (totalPrice * overDiscount).toFixed(2);
+   console.log("sono anziano");
 }
 
 console.log(discount);
@@ -63,10 +66,6 @@ console.log(discount);
 //inserire gli elementi nel DOM
 
 priceTicket.innerText = discount;
-
-if(discount === undefined){
-   priceTicket.innerText = totalPrice;
-}
 
 noDiscount.innerText = totalPrice;
 
